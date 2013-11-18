@@ -1,4 +1,3 @@
-
 /**
  * Write function to print the odd numbers from 1 to 99
  *
