@@ -2,6 +2,12 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
+/**
+ * Write function to reverse a string (without API call)
+ * 
+ * @author ZoliEngineer
+ *
+ */
 public class ReverseString {
 
     public static String reverseStringIterative(String originalString) {
