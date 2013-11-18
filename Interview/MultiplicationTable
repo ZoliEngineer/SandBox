@@ -1,8 +1,7 @@
-
 /**
  * Print out the grade-school multiplication table up to 12x12
  *
- * @author juhaszz
+ * @author ZoliEngineer
  *
  */
 public class MultiplicationTable {
