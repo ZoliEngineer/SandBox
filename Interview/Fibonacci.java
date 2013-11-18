@@ -2,7 +2,12 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-
+/**
+ * Write function to compute Nth fibonacci number
+ * 
+ * @author ZoliEngineer
+ *
+ */
 public class Fibonacci {
 
     public int fibonacciForIterative(int n) {
