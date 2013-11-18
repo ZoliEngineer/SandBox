@@ -1,8 +1,9 @@
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+import java.nio.charset.Charset;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.StandardOpenOption;
 import java.util.Scanner;
 
 
@@ -38,12 +39,17 @@ public class BasicFileManipulation {
     }
 
     private static Writer createWriter(String fileName) throws IOException {
-        return new FileWriter(fileName, true);
+        return Files.newBufferedWriter(FileSystems.getDefault().getPath(fileName), Charset.defaultCharset(),
+                StandardOpenOption.APPEND);
+
+        // return new FileWriter(fileName, true);
         // return new BufferedWriter(new FileWriter(fileName, true));
     }
 
-    private static Scanner createReader(String fileName) throws FileNotFoundException {
-        return new Scanner(new FileReader(fileName));
+    private static Scanner createReader(String fileName) throws IOException {
+        return new Scanner(Files.newBufferedReader(FileSystems.getDefault().getPath(fileName), Charset.defaultCharset()));
+
+        // return new Scanner(new FileReader(fileName));
         // return new Scanner(new BufferedReader(new FileReader(fileName)));
     }
 
