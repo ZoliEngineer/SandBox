@@ -30,7 +30,7 @@ public class ReverseString {
     }
 
     @Test
-    public void whenMethodIsCalledThenInputStringIsReversedIteratively() {
+    public void testIterative() {
         Assert.assertEquals("654321", reverseStringIterative("123456"));
         Assert.assertEquals("1", reverseStringIterative("1"));
         Assert.assertEquals("", reverseStringIterative(""));
@@ -38,7 +38,7 @@ public class ReverseString {
     }
 
     @Test
-    public void whenMethodIsCalledThenInputStringIsReversedRecursively() {
+    public void testRecursive() {
         Assert.assertEquals("654321", reverseStringRecursive("123456"));
         Assert.assertEquals("1", reverseStringRecursive("1"));
         Assert.assertEquals("", reverseStringRecursive(""));
