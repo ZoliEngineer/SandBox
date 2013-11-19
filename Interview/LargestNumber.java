@@ -1,4 +1,3 @@
-
 /**
  * Find the largest int value in an int array
  *
@@ -14,7 +13,7 @@ public class LargestNumber {
     }
 
     private static int findLargest(int[] array) {
-        int tempLargest = 0;
+        int tempLargest = Integer.MIN_VALUE;
         for (int i : array) {
             tempLargest = i > tempLargest ? i : tempLargest;
         }
