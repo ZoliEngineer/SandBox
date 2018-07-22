@@ -27,6 +27,22 @@ public class ReverseString {
         }
         return reverseStringRecursive(originalString.substring(1)) + originalString.charAt(0);
     }
+    
+    private String reverseStringTailRecursive(String input) {
+		if(input == null || input.length() <= 1) {
+			return input;
+		}
+		
+		return reverseTail(input, "");			
+	}
+	
+	private String reverseStringTailRecursiveHelper(String input, String acc) {
+		if( input.length() == 0) {
+			return acc;
+		} else {
+			return reverseStringTailRecursiveHelper(input.substring(1), input.charAt(0) + acc);
+		}
+	}
 
 
     private static void swap(char[] source, int posX, int posY) {
